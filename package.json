@@ -10,7 +10,9 @@
     "start": "node server.js"
   },
   "dependencies": {
-    "express": "^4.16.4"
+    "express": "^4.16.4",
+    "fs": "^0.0.2",
+    "storage": "^0.2.0"
   },
   "engines": {
     "node": "8.x"
