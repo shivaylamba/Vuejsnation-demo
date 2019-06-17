@@ -1,30 +1,3 @@
-// server.js
-// where your node app starts
-
-// init project
-const express = require('express');
-const app = express();
-
-// we've started you off with Express, 
-// but feel free to use whatever libs or frameworks you'd like through `package.json`.
-
-// http://expressjs.com/en/starter/static-files.html
-app.use(express.static('public'));
-
-// http://expressjs.com/en/starter/basic-routing.html
-app.get('/', function(request, response) {
-  response.sendFile(__dirname + '/views/index.html');
-});
-
-// listen for requests :)
-const listener = app.listen(process.env.PORT, function() {
-  console.log('Your app is listening on port ' + listener.address().port);
-  
-  'use strict';
-console.log('hi');
-const fs = require('fs');
-const BACKUP_INTERVAL = 60 * 60 * 1000;
-
 var Storage = {
 	
 		'databases' : {},
@@ -77,7 +50,8 @@ var Storage = {
 		}
 	}
 }
-Storage.databases['test'] = {id:'id'};
+
+function write(){
+  Storage.databses['test'] = {id:1};
   Storage.exportDatabase('test');
-  console.log(Storage.databases['test'].id);
-});
+}
