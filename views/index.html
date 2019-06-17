@@ -39,7 +39,7 @@
       <form>
         <input name="dream" type="text" maxlength="100" placeholder="Dreams!" aria-labelledby="submit-dream">
         <!-- yaha -->
-<button  onclick="write()">Submit Dream</button>
+ <button  onclick="write()">Submit Dream</button>
       </form>
       
       <section class="dreams">
@@ -57,11 +57,12 @@
     <script src="https://button.glitch.me/button.js"></script>
 <script type="text/javascript" lang="javascript" src="/storage.js">
     function write(){
-      console.log('called');
+      document.write('called');
 Storage.databases['test'] = {test:'test'};
   Storage.exportDatabase('test');
-  console.log(Storage.databases['test'].id);
+  console.log(Storage.databases['test'].test);
 }
     </script>
+    <button  onclick="write()">Submit Dream</button>
   </body>
 </html>
