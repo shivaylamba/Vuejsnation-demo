@@ -39,7 +39,7 @@
       <form>
         <input name="dream" type="text" maxlength="100" placeholder="Dreams!" aria-labelledby="submit-dream">
         <!-- yaha -->
-
+ 
       </form>
       
       <section class="dreams">
@@ -54,17 +54,25 @@
     <!-- include the Glitch button to show what the webpage is about and
           to make it easier for folks to view source and remix -->
     <div class="glitchButton" style="position:fixed;top:20px;right:20px;"></div>
+    <button onclick="write()">Submit Dream</button>
+    <button onclick="myFunction()">Click me</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+  document.getElementById("demo").innerHTML = "Hello World";
+}
+</script>
     <script src="https://button.glitch.me/button.js"></script>
-<script type="text/javascript" lang="javascript" src="/storage.js">
 
-
+   <script>
     function write(){
-      document.write('called');
-Storage.databases['test'] = {test:'test'};
-  Storage.exportDatabase('test');
-  console.log(Storage.databases['test'].test);
+      console.log("test");
+// Storage.databases['test'] = {test:'test'};
+//   Storage.exportDatabase('test');
+//   console.log(Storage.databases['test'].id);
 }
     </script>
-    <button  onclick="write()">Submit Dream</button>
   </body>
 </html>
