@@ -1,3 +1,9 @@
+
+  'use strict';
+console.log('hi');
+const fs = require('fs');
+const BACKUP_INTERVAL = 60 * 60 * 1000;
+
 var Storage = {
 	
 		'databases' : {},
@@ -49,9 +55,4 @@ var Storage = {
 			this.exportDatabase(roomid);
 		}
 	}
-}
-
-function write(){
-  Storage.databses['test'] = {id:1};
-  Storage.exportDatabase('test');
 }

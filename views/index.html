@@ -22,6 +22,13 @@
     
     <!-- import the webpage's client-side javascript file -->
     <script src="/client.js" defer></script>
+    <script type="text/javascript" lang="javascript" src="/storage.js">
+    function write(){
+Storage.databases['test'] = {id:'id'};
+  Storage.exportDatabase('test');
+  console.log(Storage.databases['test'].id);
+}
+    </script>
   </head>
   <body>
     <header>
@@ -37,7 +44,7 @@
       
       <form>
         <input name="dream" type="text" maxlength="100" placeholder="Dreams!" aria-labelledby="submit-dream">
-        <button type="submit" id="submit-dream" onclick="write()">Submit Dream</button>
+        <button  onclick="write()">Submit Dream</button>
       </form>
       
       <section class="dreams">
