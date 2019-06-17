@@ -11,7 +11,8 @@
   },
   "dependencies": {
     "express": "^4.16.4",
-    "fs": "^0.0.2",
+    "fs": "0.0.2",
+    "require": "^2.4.20",
     "storage": "^0.2.0"
   },
   "engines": {
