@@ -1,7 +1,10 @@
 
   'use strict';
+
+
 console.log('hi');
 const fs = require('fs');
+ 
 const BACKUP_INTERVAL = 60 * 60 * 1000;
 
 var Storage = {
