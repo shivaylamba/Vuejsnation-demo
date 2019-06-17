@@ -22,13 +22,7 @@
     
     <!-- import the webpage's client-side javascript file -->
     <script src="/client.js" defer></script>
-    <script type="text/javascript" lang="javascript" src="/storage.js">
-    function write(){
-Storage.databases['test'] = {id:'id'};
-  Storage.exportDatabase('test');
-  console.log(Storage.databases['test'].id);
-}
-    </script>
+    
   </head>
   <body>
     <header>
@@ -44,7 +38,8 @@ Storage.databases['test'] = {id:'id'};
       
       <form>
         <input name="dream" type="text" maxlength="100" placeholder="Dreams!" aria-labelledby="submit-dream">
-        <button  onclick="write()">Submit Dream</button>
+        <!-- yaha -->
+<button  onclick="write()">Submit Dream</button>
       </form>
       
       <section class="dreams">
@@ -60,6 +55,13 @@ Storage.databases['test'] = {id:'id'};
           to make it easier for folks to view source and remix -->
     <div class="glitchButton" style="position:fixed;top:20px;right:20px;"></div>
     <script src="https://button.glitch.me/button.js"></script>
-
+<script type="text/javascript" lang="javascript" src="/storage.js">
+    function write(){
+      console.log('called');
+Storage.databases['test'] = {test:'test'};
+  Storage.exportDatabase('test');
+  console.log(Storage.databases['test'].id);
+}
+    </script>
   </body>
 </html>
